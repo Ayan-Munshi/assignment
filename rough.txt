@@ -1,0 +1,46 @@
+<div class="practice-label-container">
+              <label class="practice-label">Practice Name</label>
+              <label class="practice-label">Practice Phone</label>
+              <label class="practice-label">Practice Address</label>
+              <label class="practice-label">Practice Details</label>
+</div>
+
+
+
+
+
+
+<div class="form-container">
+              <input type="text" placeholder="Enter Practice Name..." class="input-field" />
+              <input
+                type="text"
+                placeholder="Enter Practice Phone..."
+                class="input-field"
+              />
+              <input
+                type="text"
+                placeholder="Enter Practice Address..."
+                class="input-field"
+              />
+              <textarea
+                type="text"
+                placeholder="Enter Practice Details..."
+                class="h-[90px] input-field"
+              ></textarea>
+</div>
+
+
+
+
+
+ .practice-label-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 16px
+  }
+  .practice-label {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+  }

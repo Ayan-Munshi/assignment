@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-roundbox {
+    height: 75px;
+    width: 75px;
+    border-radius: 100%;
+    border: 2px solid #d1d5db;
+    aspect-ratio: 1;
+    text-align: center;
+   
+  }
+  .practice-logo-container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    max-width: 90%;
+    padding-left: 32px;
+  }
+  
+  
+ .Practice-logo-text{
+    font-size: 17px;
+    color: #535353 ;
+    font-weight: 600;
+ } 
+.Practice-logo-details{
+    font-size: 15px;
+    color: #3F3F3FBF;
+    margin-top: 8px;
+}
+.left-portion {
+    max-height: 1200px;
+    width: 100%; 
+  }
+  
+  @media (min-width: 1200px) {
+    .left-portion {
+      width: 50%;
+    }
+  }
+  
+  .right-portion {
+    /* max-height: 1200px; */
+    background-color: white;
+    display: none;
+  }
+  
+  @media (min-width: 1200px) {
+    .right-portion{
+      display: block;
+      width: 50%;
+    }
+  }
+
+  .tab-container {
+    display: grid;
+    padding-top: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    height: 56px;
+    gap: 8px;
+  }
+  
+  .tab-selected {
+    position: relative;
+    max-width: 99px;
+    text-align: center;
+    grid-column: span 2;
+    height: 42px;
+    font-size: 14px;
+    z-index: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .tab-selected {
+      font-size: 16px;
+    }
+  }
+  
+  .tab-selected::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #2260EE;
+  }
+  
+  .tab {
+    max-width: 99px;
+    text-align: center;
+    grid-column: span 2;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .phone-preview {
+    max-width: 288px;
+    aspect-ratio: 2 / 3;
+    width: 100%;
+    border: 10px solid black;
+    border-radius: 1rem;
+    background-color: #ebf8ff;
+    padding: 10px;
+    box-shadow: 0 4px 6px black;
+  }
+  
+  
+  .input-field {
+    height: 60px;
+    width: 400px;
+    padding-left: 12px; 
+    border: 2px solid #d1d5db; 
+    border-radius: 8px; 
+  }
+  
+  .custom-heading {
+    padding-left: 32px; 
+    padding-top: 45px;  
+    padding-bottom: 30px;
+    font-size: 21px;    
+    font-weight: 450;   
+  }
+  .container {
+    display: flex;
+    gap: 64px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .color-box {
+    width: 40px;
+    height: 40px;
+    background-color:#144092;
+    border-radius: 4px;
+  }
+  
+  .reset-button {
+    color: #3b82f6;
+    font-weight: 500;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .practice-label-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 16px
+  }
+  .practice-input-set {
+    display: flex;
+    gap: 40px
+  }
+  .practice-label {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    
+  }
+
+  .theme-p-tag {
+    font-size: 14px;
+    color: #a2a4a7;
+  }
+
+  .custom-save-button {
+    height: 40px;
+    border: 1px solid #60a5fa;
+    padding: 8px 25px;
+    border-radius: 10000px;
+    background-color: #60a5fa;
+    color: white;
+  }
+  
+  .custom-switch {
+    height: 64px;
+    width: 64px;
+    background-color: #7AA3FF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
