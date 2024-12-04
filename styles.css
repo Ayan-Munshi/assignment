@@ -31,7 +31,7 @@
     margin-top: 8px;
 }
 .left-portion {
-    max-height: 1200px;
+    height: 100%;
     width: 100%; 
   }
   
@@ -55,11 +55,10 @@
   }
 
   .tab-container {
-    display: grid;
+    display: flex;
     padding-top: 20px;
-    grid-template-columns: repeat(12, 1fr);
     height: 56px;
-    gap: 8px;
+    gap: 10px;
   }
   
   .tab-selected {
@@ -90,6 +89,7 @@
   
   .tab {
     max-width: 99px;
+    width: 100%;
     text-align: center;
     grid-column: span 2;
     height: 42px;

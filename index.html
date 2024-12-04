@@ -40,23 +40,25 @@
         </div>
       </header>
 
-      <!-- tabs -->
-      <div
-        class="px-[36px] pt-7 border-b-2 border-gray-300 bg-white mt-[17px] ml-[17px]"
-      >
-        <h1 class="text-[23px] font-[500] ">Settings</h1>
-
-        <div class="tab-container ">
-          <div class="tab-selected">Apperance</div>
-          <div class="tab">Widgets</div>
-          <div class="tab">Confirmation</div>
-        </div>
-      </div>
+      
 
       <!-- content -->
-      <main class="flex ml-[17px] bg-white">
-        <!-- left -->
-        <div id="left" class="left-portion">
+      <main class=" bg-white mt-10 ml-[40px]">
+        <!-- tabs -->
+      <div
+      class=" pt-7 border-b-2 border-gray-300 px-9"
+    >
+      <h1 class="text-[23px] font-[500] ">Settings</h1>
+
+      <div class="tab-container bg-white">
+        <div class="tab-selected">Apperance</div>
+        <div class="tab">Widgets</div>
+        <div class="tab">Confirmation</div>
+      </div>
+    </div>
+       <div class="flex">
+         <!-- left -->
+         <div id="left" class="left-portion">
           <div class="custom-heading">General</div>
           <!-- / -->
           <div class="practice-logo-container">
@@ -77,36 +79,9 @@
           </div>
           
           <div class="flex mt-[34px]">
-            <!-- <div class="practice-label-container">
-              <label class="practice-label">Practice Name</label>
-              <label class="practice-label">Practice Phone</label>
-              <label class="practice-label">Practice Address</label>
-              <label class="practice-label">Practice Details</label>
-            </div> -->
-            <!-- <div class="form-container">
-              <input
-                type="text"
-                placeholder="Enter Practice Name..."
-                class="input-field"
-              />
-              <input
-                type="text"
-                placeholder="Enter Practice Phone..."
-                class="input-field"
-              />
-              <input
-                type="text"
-                placeholder="Enter Practice Address..."
-                class="input-field"
-              />
-              <textarea
-                type="text"
-                placeholder="Enter Practice Details..."
-                class="h-[90px] input-field"
-              ></textarea>
-            </div> -->
+           
             <div class="form-container w-full">
-              <div class="practice-input-set">
+              <div class="practice-input-set flex-wrap">
                 <label class="practice-label">Practice Name</label>
                 <input
                   type="text"
@@ -186,7 +161,7 @@
         </div>
 
         <!-- right -->
-        <div id="right" class="right-portion sticky top-0 max-h-screen">
+        <div id="right" class="right-portion sticky top-0 h-[750px]">
           <div class="flex justify-center h-20 gap-3 bg-white text-black mt-20">
             <!-- buttons -->
             <div
@@ -275,13 +250,23 @@
             </div>
           </div>
         </div>
+       </div>
       </main>
     </div>
   </body>
 </html>
 
-<!-- <nav class=" top-0 z-2 sticky bg-slate-300 py-4">nav bar</nav>
-<div class="grid grid-cols-2 gap-5 h-[1200px] ">
-  <div class="w-full p-[25px] bg-red-500">this is left side</div>
-  <div class="overflow-x-hidden sticky top-[50px] h-screen items-center justify-center min-h-[600px]  bg-blue-500">this is right side</div>
-</div> -->
+<!-- <body>
+  <div class="parent-Container flex min-h-screen">
+    <div class="flex-1 bg-blue-100">
+      <div class="nav sticky top-0 z-[50] w-full bg-blue-200 p-5">nav</div>
+      <div class="flex w-full bg-blue-900">
+        <div class="h-[1250px] w-1/2 bg-green-600">content</div>
+        <div class="w-1/2 bg-green-200">
+          <div class="sticky top-[70px] mt-5 h-[350px] w-[80%] bg-blue-300">2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body> -->
+
