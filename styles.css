@@ -13,10 +13,10 @@
    
   }
   .practice-logo-container {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    
+    margin-top: 30px;
     max-width: 90%;
-    padding-left: 32px;
+    
   }
   
   
@@ -33,6 +33,8 @@
 .left-portion {
     height: 100%;
     width: 100%; 
+    padding-top: 40px;
+    padding-left: 32px;
   }
   
   @media (min-width: 1200px) {
@@ -118,9 +120,7 @@
   }
   
   .custom-heading {
-    padding-left: 32px; 
-    padding-top: 45px;  
-    padding-bottom: 30px;
+    margin-top: 20px;
     font-size: 21px;    
     font-weight: 450;   
   }
