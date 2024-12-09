@@ -2,49 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.layout-container {
-  display: grid;
-  grid-template-columns: 200px 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr;
-  grid-template-areas: 
-  "sidebar header header"
-  "sidebar main main "
-  "sidebar main main";
+.layout{
+  display: flex;
+  background-color: #cfd0d2;
+  max-height: 100vh;
 }
 
-.sidebar {
-  grid-area: sidebar;
-}
-
-.header {
-  grid-area: header;
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  background-color: white;
+  color: black;
+  top: 0;
+  z-index: 4px;
   
 }
 
-.main {
-  grid-area: main;
-}
-
-
-
 @media screen and (max-width: 1024px) {
-  .layout-container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-areas: 
-  " header header"
-  " main main "
-  " main main";
+  .side-bar{
+    display: none;
   }
 }
 
 @media screen and (max-width: 270px) {
-  .layout-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "main";
-  }
   .tab-container {
     flex-wrap: wrap;
   }
@@ -53,26 +34,93 @@
   }
 }
 
-.custom-roundbox {
-    height: 75px;
-    width: 75px;
-    border-radius: 100%;
-    border: 2px solid #d1d5db;
-    aspect-ratio: 1;
-    text-align: center;
-   
+.sidebar-logo {
+  padding: 20px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+.nav-link {
+  padding: 8px;
+  border-radius: 4px;
+
+}
+.nav-link:hover {
+  background-color: #babbbe;
+}
+
+.nav-link-div {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 20px;
+}
+.div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.nav-bar {
+  height: 64px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 28px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  .nav-bar {
+    display: none;
   }
-  .practice-logo-container {
-    display: flex;
-    
-    margin-top: 30px;
-    max-width: 100%;
-    width: 100%;
-    
+}
+
+.navbar-text {
+  font-weight: bold;
+}
+
+.main {
+  padding: 30px;
+  background: transparent;
+}
+
+.left-portion {
+  width: 100%; 
+  padding-top: 40px;
+  padding-bottom: 20px ;
+  padding-left: 36px;
+  background-color: white;
+}
+
+@media (min-width: 1200px) {
+  .left-portion {
+    width: 50%;
   }
-  
-  
- .Practice-logo-text{
+}
+
+
+.heading-area {
+  padding-top: 28px;
+  border-bottom: 2px solid #d1d5db;
+  padding-left: 36px;
+  padding-right: 36px;
+  background-color: white;
+}
+
+.settings {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+
+ .Practice-logo-label{
     font-size: 17px;
     color: #535353 ;
     font-weight: 600;
@@ -82,24 +130,27 @@
     color: #3F3F3FBF;
     margin-top: 8px;
 }
-.left-portion {
-    height: 100%;
-    width: 100%; 
-    padding-top: 40px;
-    padding-bottom: 20px ;
-    padding-left: 32px;
-  }
-  
-  @media (min-width: 1200px) {
-    .left-portion {
-      width: 50%;
-    }
-  }
-  
+
+
+.practice-image-box {
+  height: 75px;
+  width: 75px;
+  border-radius: 100%;
+  border: 2px solid #d1d5db;
+  aspect-ratio: 1;
+  text-align: center;
+  overflow: hidden;
+  margin: 5px;
+}
+
   .right-portion {
     /* max-height: 1200px; */
     background-color: white;
     display: none;
+    padding-top: 55px;
+    position: sticky;
+    top: 10px;
+    height: 720px;
   }
   
   @media (min-width: 1200px) {
@@ -109,36 +160,36 @@
     }
   }
 
-  .index-container{
-    width: 100%;
-    margin-top: 25px;
+  .custom-switch-container {
+    display: flex;
+  justify-content: center;
+  gap: 12px;
+  background-color: white;
+  color: black;
+  }
+
+  .delete-button {
+    color: rgb(208, 3, 3);
   }
 
   .tab-container {
     display: flex;
     flex-direction: row;
-    
+    background-color: white;
     margin-top: 20px;
-        
+    gap: 20px;
+    justify-content: start;
   }
+
   
-  .tab-selected {
+  .tab {
     position: relative;
-    max-width: 99px;
     text-align: center;
-    grid-column: span 2;
-    height: 42px;
     font-size: 14px;
-    z-index: 0;
+    padding: 10px;
   }
   
-  @media (min-width: 768px) {
-    .tab-selected {
-      font-size: 16px;
-    }
-  }
-  
-  .tab-selected::after {
+  .selected::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -148,15 +199,31 @@
     background-color: #2260EE;
   }
   
-  .tab {
-    max-width: 99px;
-    width: 100%;
-    text-align: center;
-    grid-column: span 2;
-    height: 42px;
-    font-size: 14px;
+  @media (max-width: 440px) {
+    .tab-container {
+      flex-direction: column;
+      align-items:flex-start;
+      gap:2px;
+    }
+  }
+  
+  .portions {
+    display: flex;
   }
 
+  .practice-logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%; 
+  }
+
+  .practice-logo-label-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 60%;
+  }
   .phone-preview {
     max-width: 288px;
     aspect-ratio: 2 / 3;
@@ -169,30 +236,46 @@
   }
   
   
-  .input-field {
-    height: 60px;
-    max-width: 400px;
-    width: 100%;
-    padding-left: 12px; 
-    border: 2px solid #d1d5db; 
-    border-radius: 8px; 
-  }
+
   
   .custom-heading {
-    margin-top: 20px;
     font-size: 21px;    
     font-weight: 450;   
   }
-  .container {
-    display: flex;
-    gap: 45px;
+
+  .custom-theme-heading {
+    font-size: 21px;    
+    font-weight: 450; 
+    margin-top: 20px;  
+  }
+
+  .color-picker-portion{
+    margin-top: 28px;
+  }
+  .color-container {
+    display: flex;   
     flex-wrap: wrap;
+    margin-top: 24px;
+  }
+
+  .color-label-container {
+    width: 45%;
+  }
+  @media (max-width: 429px) {
+   .color-label-container{
+    width: 100%;
+   }
+    .color-container{
+      gap: 13px;
+    }
   }
   
   .button-container {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
   }
+  
   
   .color-box {
     width: 40px;
@@ -228,9 +311,83 @@
     
   }
 
+  .input-container{
+    margin-top: 35px;
+  }
+
+  .input {
+    display: flex;
+    flex-wrap: wrap;   
+    margin-top: 10px;
+  
+   }
+
+   .input-label-container {
+    width: 28%;
+    align-self: center;
+   }
+
+   .iput-label {
+    font-size: 16px;
+    color: #535353;
+    font-weight: 500;
+   }
+
+   .input-field {
+    border: 2px solid #d1d5db;
+    height: 55px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 6px;
+    max-width: 400px;
+    width: 100%;
+   }
+
+   .textarea-field {
+    border: 2px solid #d1d5db;
+    height: 85px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 6px;
+    max-width: 400px;
+    width: 100%;
+   }
+  
+  .practice-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  @media screen and (max-width: 647px) {
+    .input-label-container {
+      width: 100%;
+    }
+    .input {
+      gap: 7px;
+      margin-top: 15px;
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    .input {
+      gap: 7px;
+      margin-top: 15px;
+    }
+  }
+
+
+
   .theme-p-tag {
     font-size: 14px;
     color: #a2a4a7;
+  }
+
+  .custom-save-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 24px;
   }
 
   .custom-save-button {
@@ -251,4 +408,88 @@
     align-items: center;
     justify-content: center;
   }
+
+  .disable {
+    background: rgb(219, 217, 217);
+  }
+
+  .phone-preview-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .practice-branding {
+    height: 140px;
+    background-color: #144092;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+    color: white;
+  }
   
+  .practice-logo {
+    max-width:70px;
+  }
+
+  .practice-details-container {
+    padding: 16px;
+    background: white;
+  }
+
+  .heading-text {
+    font-weight: bold;
+    color: #6b7280; 
+    font-size: 20px; 
+
+  }
+
+  .label {
+    margin-top: 20px;
+    color: #6b7280; 
+    font-size: 16px; 
+    font-weight: 600;
+  }
+
+  .input-div {
+    height: 48px;
+    border: 2px solid #9ca3af; /* gray-400 */
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 10px;
+    color: #9ca3af;
+  }
+
+  .question-text {
+    font-weight: bold;
+  font-size: 14px; 
+  color: #6b7280; 
+  margin-top: 12px
+  }
+
+  .radio-button {
+    height: 40px;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+  border: 2px solid #9ca3af; 
+  margin-top: 8px;
+  }
+
+  .selected-radio {
+    height: 40px;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+  border: 2px solid #9ca3af; 
+  margin-top: 8px;
+  background: #144092;
+  color: white;
+  }
+
+  .hr {
+    margin-top: 40px;
+  }

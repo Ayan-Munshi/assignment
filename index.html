@@ -8,167 +8,176 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
   </head>
-  <body class="layout-container bg-gray-300 max-h-screen ">
+  <body class="layout">
     <!-- sidebar -->
-    <nav
-      class="sidebar  bg-white text-black flex flex-col sticky top-0 z-2 hidden lg:block"
-    >
-      <div class="p-4 text-xl font-bold">Logo</div>
-      <div class="flex flex-col gap-[28px] p-4">
-        <a href="#" class="p-2 hover:bg-gray-200 rounded">Home</a>
-        <a href="#" class="p-2 hover:bg-gray-200 rounded">Reason</a>
-        <a href="#" class="p-2 hover:bg-gray-200 rounded">Providers</a>
-        <a href="#" class="p-2 hover:bg-gray-200 rounded">Settings</a>
-        <a href="#" class="p-2 hover:bg-gray-200 rounded">Appointments</a>
-        <a href="#" class="p-2 hover:bg-gray-200 rounded">Practices</a>
+    <nav class="side-bar">
+      <div class="sidebar-logo">Logo</div>
+      <div class="nav-link-div">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Reason</a>
+        <a href="#" class="nav-link">Providers</a>
+        <a href="#" class="nav-link">Settings</a>
+        <a href="#" class="nav-link">Appointments</a>
+        <a href="#" class="nav-link">Practices</a>
       </div>
     </nav>
 
-    <div class="header w-full flex flex-col overflow-y-auto">
+    <div class="div">
       <!-- navbar -->
-      <header
-        class="hidden sm:block  h-16 shadow-md bg-white flex items-center justify-between px-6 py-7 sticky top-0 z-10"
-      >
-        <div class="text-lg font-semibold">Navbar</div>
-        
+      <header class="nav-bar">
+        <div class="navbar-text">Navbar</div>
       </header>
 
       <!-- content -->
-      <main class="main bg-white mt-10 ml-[40px] ">
+      <main class="main">
         <!-- tabs -->
-        <div class="pt-7 border-b-2 border-gray-300 px-9">
-          <h1 class="text-[23px] font-[500]">Settings</h1>
+        <div class="heading-area">
+          <h1 class="settings">Settings</h1>
 
-          <div class="tab-container  bg-white">
-            <div class="tab-selected">Apperance</div>
+          <div class="tab-container">
+            <div class="tab selected">Apperance</div>
             <div class="tab">Widgets</div>
             <div class="tab">Confirmation</div>
           </div>
         </div>
-        <div class="flex">
+        <div class="portions">
           <!-- left -->
           <div id="left" class="left-portion">
             <div class="custom-heading">General</div>
             <!-- / -->
-            <div class="practice-logo-container flex-wrap">
-              
-              <div class="flex flex-col gap-1 max-w-[60%]">
-                <label class="Practice-logo-text">Practice logo</label>
+            <div class="practice-logo-container">
+              <div class="practice-logo-label-container">
+                <label class="Practice-logo-label">Practice logo</label>
                 <p class="Practice-logo-details">
                   This webpage requires data that you entered earlier in order
                   to be properly displayed.
                 </p>
-                
               </div>
-              <div class="custom-roundbox">
+              <div class="practice-image-box">
                 <img
-                  class="rounded-full"
+                  class=""
                   src="https://www.shutterstock.com/image-vector/happy-dental-tooth-dentist-dentistry-600nw-2513921641.jpg"
                   alt=""
                 />
               </div>
-            <div class="flex flex-wrap gap-2">
-              <button>Upadate</button>
-              <button class="text-red-500">Delete</button>
+              <div class="practice-button-container ">
+                <button>Upadate</button>
+                <button class="delete-button">Delete</button>
+              </div>
+              <hr class="hr" />
             </div>
-              <hr class="mt-10" />
-            </div>
-              
+
             <!-- inputs -->
-            
-              <div class="index-container w-full space-y-4 ">
-                <div class="flex w-full flex-wrap">
-                  <div class=" w-[28%] self-center">
-                    <label class="text-[16px] 2xl:text-md text-[#535353] font-medium">
-                      Practice Name
-                    </label>
-                  </div>
-                  <input
-                   placeholder="Enter your practice name..."
-                   type="text" class="border-2 border-gray-300 h-[55px] px-2 rounded-[6px] max-w-[400px] w-full focus-visible:ring-blue-200 focus-visible:ring-2 focus-visible:border-transparent">
+
+            <div class="input-container ">
+              <div class=" input">
+                <div class=" input-label-container">
+                  <label
+                    class="iput-label"
+                  >
+                    Practice Name
+                  </label>
                 </div>
-                <div class="flex w-full flex-wrap">
-                  <div class=" w-[28%] self-center">
-                    <label class="text-[16px] 2xl:text-md text-[#535353] font-medium">
-                      Practice Phone
-                    </label>
-                  </div>
-                  <input
-                   placeholder="Enter your practice phone..."
-                   type="text" class="border-2 border-gray-300 h-[55px] px-2 rounded-[6px] max-w-[400px] w-full focus-visible:ring-blue-200 focus-visible:ring-2 focus-visible:border-transparent">
+                <input
+                  placeholder="Enter your practice name..."
+                  type="text"
+                  class="input-field "
+                />
+              </div>
+              <div class="input">
+                <div class="input-label-container">
+                  <label
+                    class="iput-label"
+                  >
+                    Practice Phone
+                  </label>
                 </div>
-                <div class="flex w-full flex-wrap">
-                  <div class=" w-[28%] self-center">
-                    <label class="text-[16px] 2xl:text-md text-[#535353] font-medium">
-                      Practice Address
-                    </label>
-                  </div>
-                  <input
-                   placeholder="Enter your practice address..."
-                   type="text" class="border-2 border-gray-300 h-[55px] px-2 rounded-[6px] max-w-[400px] w-full focus-visible:ring-blue-200 focus-visible:ring-2 focus-visible:border-transparent">
+                <input
+                  placeholder="Enter your practice phone..."
+                  type="text"
+                  class="input-field"
+                />
+              </div>
+              <div class="input">
+                <div class="input-label-container">
+                  <label
+                    class="iput-label"
+                  >
+                    Practice Address
+                  </label>
                 </div>
-                <div class="flex w-full flex-wrap">
-                  <div class=" w-[28%]  self-center">
-                    <label class="text-[16px] 2xl:text-md text-[#535353] font-medium">
-                      Practice Details
-                    </label>
-                  </div>
-                  <textarea
-                   placeholder="Enter your practice details..."
-                   type="text" class="border-2 border-gray-300 h-[85px] px-2 rounded-[6px] max-w-[400px] w-full focus-visible:ring-blue-200 focus-visible:ring-2 focus-visible:border-transparent"></textarea>
+                <input
+                  placeholder="Enter your practice address..."
+                  type="text"
+                  class="input-field"
+                />
+              </div>
+              <div class="input">
+                <div class="input-label-container">
+                  <label
+                    class="iput-label"
+                  >
+                    Practice Details
+                  </label>
+                </div>
+                <textarea
+                  placeholder="Enter your practice details..."
+                  type="text"
+                  class="textarea-field"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="custom-theme-heading">Theme</div>
+
+            <!-- colors -->
+            <div class="color-picker-portion">
+              <div class="color-container ">
+                <div class="color-label-container">
+                  <label>Brand Color</label>
+                  <p class="theme-p-tag">The primary color of the button</p>
+                </div>
+                <div class="button-container">
+                  <div class="color-box"></div>
+                  <button>Update</button>
+                  <button class="reset-button">Reset</button>
                 </div>
               </div>
-           
-            <div class="custom-heading">Theme</div>
-            
-              <!-- colors -->
-              <div class="mt-7">
-                <div class="container">
-                  <div class="label-container">
-                    <label>Brand Color</label>
-                    <p class="theme-p-tag">The primary color of the button</p>
-                  </div>
-                  <div class="button-container flex-wrap">
-                    <div class="color-box"></div>
-                    <button>Update</button>
-                    <button class="reset-button">Reset</button>
-                  </div>
-                </div>
 
-                <div class="container mt-6">
-                  <div class="label-container ">
-                    <label>Button Primary</label>
-                    <p class="theme-p-tag">The primary color of the button</p>
-                  </div>
-                  <div class="button-container flex-wrap">
-                    <div class="color-box"></div>
-                    <button>Update</button>
-                    <button class="reset-button">Reset</button>
-                  </div>
+              <div class="color-container">
+                <div class="color-label-container">
+                  <label>Button Primary</label>
+                  <p class="theme-p-tag">The primary color of the button</p>
                 </div>
-
-                <div class="container mt-6">
-                  <div class="label-container">
-                    <label>Button Secondary</label>
-                    <p class="theme-p-tag">The primary color of the button</p>
-                  </div>
-                  <div class="button-container flex-wrap">
-                    <div class="color-box"></div>
-                    <button>Update</button>
-                    <button class="reset-button">Reset</button>
-                  </div>
+                <div class="button-container ">
+                  <div class="color-box"></div>
+                  <button>Update</button>
+                  <button class="reset-button">Reset</button>
                 </div>
               </div>
-            
-            <div class="w-full flex justify-end mt-4">
+
+              <div class="color-container">
+                <div class="color-label-container">
+                  <label>Button Secondary</label>
+                  <p class="theme-p-tag">The primary color of the button</p>
+                </div>
+                <div class="button-container">
+                  <div class="color-box"></div>
+                  <button>Update</button>
+                  <button class="reset-button">Reset</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="custom-save-button-container">
               <button class="custom-save-button">Save</button>
             </div>
           </div>
 
           <!-- right -->
-          <div id="right" class="right-portion sticky top-0 h-[750px]">
+          <div id="right" class="right-portion">
             <div
-              class="flex justify-center h-20 gap-3 bg-white text-black mt-20"
+              class="custom-switch-container"
             >
               <!-- buttons -->
               <div class="custom-switch">
@@ -191,7 +200,7 @@
                   </g>
                 </svg>
               </div>
-              <div class="custom-switch bg-gray-300">
+              <div class="custom-switch disable">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -208,13 +217,13 @@
             </div>
 
             <!-- phone -->
-            <div class="flex justify-center mt-5">
+            <div class="phone-preview-container">
               <div class="phone-preview">
                 <div
-                  class="h-[140px] bg-[#144092] flex flex-col items-center p-1 text-white"
+                  class="practice-branding"
                 >
                   <img
-                    class="max-w-[70px]"
+                    class="practice-logo"
                     src="https://www.shutterstock.com/image-vector/happy-dental-tooth-dentist-dentistry-600nw-2513921641.jpg"
                     alt=""
                   />
@@ -222,36 +231,36 @@
                   <p>Phone Number</p>
                 </div>
 
-                <div class="p-4 min-h-full bg-white">
-                  <h1 class="font-bold text-gray-500 text-xl">
+                <div class="practice-details-container">
+                  <h1 class="heading-text">
                     Enter your Details
                   </h1>
-                  <label class="mt-5 text-gray-500 text-md font-semibold">
+                  <label class="label">
                     First Name</label
                   >
                   <div
-                    class="h-12 border-2 border-gray-400 rounded p-2 mt-3 text-gray-400"
+                    class="input-div"
                   >
                     Enter First Name...
                   </div>
-                  <label class="mt-3 text-gray-500 text-md font-semibold">
+                  <label class="label">
                     Last Name</label
                   >
                   <div
-                    class="h-12 border-2 border-gray-400 rounded p-2 mt-3 text-gray-400"
+                    class="input-div"
                   >
                     Enter Last Name...
                   </div>
-                  <h2 class="font-bold text-sm text-gray-500 mt-3">
+                  <h2 class="question-text">
                     Have you ever visited us before
                   </h2>
                   <div
-                    class="h-10 text-center py-1 rounded border-2 border-gray-400 mt-5"
+                    class="radio-button"
                   >
                     New Patient
                   </div>
                   <div
-                    class="h-10 text-center text-white py-1.5 bg-[#144092] rounded mt-4"
+                    class="radio-button selected-radio"
                   >
                     Returning Patient
                   </div>
