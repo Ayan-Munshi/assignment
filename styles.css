@@ -3,6 +3,56 @@
 @tailwind utilities;
 
 
+.layout-container {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas: 
+  "sidebar header header"
+  "sidebar main main "
+  "sidebar main main";
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.header {
+  grid-area: header;
+  
+}
+
+.main {
+  grid-area: main;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .layout-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas: 
+  " header header"
+  " main main "
+  " main main";
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .layout-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "main";
+  }
+  .tab-container {
+    flex-wrap: wrap;
+  }
+  .tab-selected::after {
+    display: none;
+  }
+}
+
 .custom-roundbox {
     height: 75px;
     width: 75px;
@@ -13,9 +63,11 @@
    
   }
   .practice-logo-container {
+    display: flex;
     
     margin-top: 30px;
-    max-width: 90%;
+    max-width: 100%;
+    width: 100%;
     
   }
   
@@ -34,6 +86,7 @@
     height: 100%;
     width: 100%; 
     padding-top: 40px;
+    padding-bottom: 20px ;
     padding-left: 32px;
   }
   
@@ -56,11 +109,17 @@
     }
   }
 
+  .index-container{
+    width: 100%;
+    margin-top: 25px;
+  }
+
   .tab-container {
     display: flex;
-    padding-top: 20px;
-    height: 56px;
-    gap: 10px;
+    flex-direction: row;
+    
+    margin-top: 20px;
+        
   }
   
   .tab-selected {
@@ -126,7 +185,8 @@
   }
   .container {
     display: flex;
-    gap: 64px;
+    gap: 45px;
+    flex-wrap: wrap;
   }
   
   .button-container {
